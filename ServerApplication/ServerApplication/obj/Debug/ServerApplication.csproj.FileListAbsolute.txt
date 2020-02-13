@@ -15,3 +15,14 @@ D:\Applications\ServerApplication\ServerApplication\bin\Debug\Newtonsoft.Json.dl
 D:\Applications\ServerApplication\ServerApplication\bin\Debug\ApplicationUtility.pdb
 D:\Applications\ServerApplication\ServerApplication\bin\Debug\ServerElemets.pdb
 D:\Applications\ServerApplication\ServerApplication\bin\Debug\ServerElemets.dll
+D:\Applications\CsharpProjectCopy\ServerApplication\ServerApplication\bin\Debug\ServerApplication.exe.config
+D:\Applications\CsharpProjectCopy\ServerApplication\ServerApplication\obj\Debug\ServerApplication.exe
+D:\Applications\CsharpProjectCopy\ServerApplication\ServerApplication\obj\Debug\ServerApplication.pdb
+D:\Applications\CsharpProjectCopy\ServerApplication\ServerApplication\bin\Debug\ServerApplication.exe
+D:\Applications\CsharpProjectCopy\ServerApplication\ServerApplication\bin\Debug\ServerApplication.pdb
+D:\Applications\CsharpProjectCopy\ServerApplication\ServerApplication\bin\Debug\ApplicationUtility.dll
+D:\Applications\CsharpProjectCopy\ServerApplication\ServerApplication\bin\Debug\Newtonsoft.Json.dll
+D:\Applications\CsharpProjectCopy\ServerApplication\ServerApplication\bin\Debug\ServerElemets.dll
+D:\Applications\CsharpProjectCopy\ServerApplication\ServerApplication\bin\Debug\ApplicationUtility.pdb
+D:\Applications\CsharpProjectCopy\ServerApplication\ServerApplication\bin\Debug\ServerElemets.pdb
+D:\Applications\CsharpProjectCopy\ServerApplication\ServerApplication\obj\Debug\ServerApplication.csprojResolveAssemblyReference.cache

@@ -48,7 +48,7 @@ namespace ServerApplication
 
        public static string randomWord;
 
-
+      
         
         static void Main(string[] args)
         {
@@ -225,12 +225,20 @@ namespace ServerApplication
 
             private static void SendAndReciveTheCharacters(object obj)
             {
+               
+                bool flagword = true;
                 bool flag = true;
+                string word="";
                 while (true)
                 {
                     
                     RoomServer server = (RoomServer)obj;
-                    string word = ReadFromFile(server.Categories.ToString());
+                      
+                    if(string.IsNullOrEmpty(word)){
+                    word = ReadFromFile(server.Categories.ToString());
+                      
+                    }
+                    
                     word.Replace("\0", string.Empty);
                     if (server.IsStarted == false)
                     {

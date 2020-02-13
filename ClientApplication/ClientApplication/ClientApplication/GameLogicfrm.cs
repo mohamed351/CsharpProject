@@ -147,6 +147,11 @@ namespace ClientApplication
                           }
 
                       } while (message != "false");
+
+                      if (message == "false")
+                      {
+                          this.customeKeyBoard1.Dimit = true;
+                      }
                 });
 
              
@@ -192,24 +197,15 @@ namespace ClientApplication
         {
             if (!string.IsNullOrEmpty(receivedMsg))
             {
-                //if (receivedMsg.ToUpper().Contains(btn.Text))
-                //{
-                    
-                //    //find the litter 
-                //    CheckLetter(btn);
-                //    Helper.SendConvert(ch.ToString(), UserInformation.ClientRoom.Client);
 
-                    
-                //}
-                //else
-                //{
-                //    MessageBox.Show("wrong");
-                //    Helper.SendConvert("false",UserInformation.ClientRoom.Client);
-                //    this.customeKeyBoard1.Dimit = false;
-                   
-                //}
 
-               CheckLetter(char.Parse(btn.Text));
+                bool iswordTrue = CheckLetter(char.Parse(btn.Text));
+                if (!iswordTrue)
+                {
+                    backgroundWorker2.RunWorkerAsync();
+                }
+              
+                
             }
             else
             {
@@ -238,14 +234,29 @@ namespace ClientApplication
 
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
-
+            while (true)
+            {
+                string message = Helper.ReciveConvert(UserInformation.ClientRoom.Client);
+                message = message.Replace("\0", string.Empty);
+                if (message != "false")
+                {
+                    if (message.Length <= 1)
+                    {
+                        CheckLetter(char.Parse(message));
+                    }
+                }
+                else
+                {
+                    this.customeKeyBoard1.Dimit = true;
+                }
+            }
         }
 
 
-        private void CheckLetter(char letter)
+        private bool CheckLetter(char letter)
         {
             char[] randomWordChar = receivedMsg.ToCharArray();
-
+            bool isTrueOrFalse;
             if (receivedMsg.Contains(letter.ToString().ToLower()))
             {
                 Helper.SendConvert(letter.ToString(), UserInformation.ClientRoom.Client);
@@ -263,13 +274,26 @@ namespace ClientApplication
 
                 if (count == receivedMsg.Length)
                 {
-                    DialogResult result = MessageBox.Show("Congratulation, you win!! \n Do you want to play again?", "Message", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (result == DialogResult.OK)
-                    {
+                    bool flag =false;
+               foreach (Label item in flowLayoutPanel1.Controls)
+	           {
+                   if (item.Text != "_")
+                   {
+                       flag = true;
+                   }
+	            }
+               if (flag)
+               {
 
+                   DialogResult result = MessageBox.Show("Congratulation, you win!! \n Do you want to play again?", "Message", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                   if (result == DialogResult.OK)
+                   {
 
-                    }
+                      
+                   }
                 }
+               }
+                isTrueOrFalse = true;
 
             }
             else
@@ -279,10 +303,13 @@ namespace ClientApplication
                 //groupBox1.Enabled = false;
                 customeKeyBoard1.Dimit = false;
                 Helper.SendConvert("false", UserInformation.ClientRoom.Client);
-
+                isTrueOrFalse = false;
             }
 
+            return isTrueOrFalse;
+
         }
+       
 
      
 
