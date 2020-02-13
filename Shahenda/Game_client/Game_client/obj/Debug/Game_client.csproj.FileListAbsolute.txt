@@ -1,0 +1,23 @@
+C:\Users\shahe\OneDrive\Documents\Visual Studio 2017\Projects\Game_client\Game_client\bin\Debug\Game_client.exe.config
+C:\Users\shahe\OneDrive\Documents\Visual Studio 2017\Projects\Game_client\Game_client\bin\Debug\Game_client.exe
+C:\Users\shahe\OneDrive\Documents\Visual Studio 2017\Projects\Game_client\Game_client\bin\Debug\Game_client.pdb
+C:\Users\shahe\OneDrive\Documents\Visual Studio 2017\Projects\Game_client\Game_client\obj\Debug\Game_client.csprojResolveAssemblyReference.cache
+C:\Users\shahe\OneDrive\Documents\Visual Studio 2017\Projects\Game_client\Game_client\obj\Debug\Game_client.Form1.resources
+C:\Users\shahe\OneDrive\Documents\Visual Studio 2017\Projects\Game_client\Game_client\obj\Debug\Game_client.Properties.Resources.resources
+C:\Users\shahe\OneDrive\Documents\Visual Studio 2017\Projects\Game_client\Game_client\obj\Debug\Game_client.csproj.GenerateResource.Cache
+C:\Users\shahe\OneDrive\Documents\Visual Studio 2017\Projects\Game_client\Game_client\obj\Debug\Game_client.exe
+C:\Users\shahe\OneDrive\Documents\Visual Studio 2017\Projects\Game_client\Game_client\obj\Debug\Game_client.pdb
+C:\Users\shahe\OneDrive\Documents\Visual Studio 2017\Projects\Game_client\Game_client\obj\Debug\Game_client.PlayAgain.resources
+F:\Game_client\Game_client\bin\Debug\Game_client.exe.config
+F:\Game_client\Game_client\obj\Debug\Game_client.exe
+F:\Game_client\Game_client\obj\Debug\Game_client.pdb
+D:\Applications\HelloWorld\Game_client\Game_client\bin\Debug\Game_client.exe.config
+D:\Applications\HelloWorld\Game_client\Game_client\obj\Debug\Game_client.exe
+D:\Applications\HelloWorld\Game_client\Game_client\obj\Debug\Game_client.pdb
+D:\Applications\HelloWorld\Game_client\Game_client\bin\Debug\Game_client.exe
+D:\Applications\HelloWorld\Game_client\Game_client\bin\Debug\Game_client.pdb
+D:\Applications\HelloWorld\Game_client\Game_client\obj\Debug\Game_client.csprojResolveAssemblyReference.cache
+D:\Applications\HelloWorld\Game_client\Game_client\obj\Debug\Game_client.Form1.resources
+D:\Applications\HelloWorld\Game_client\Game_client\obj\Debug\Game_client.PlayAgain.resources
+D:\Applications\HelloWorld\Game_client\Game_client\obj\Debug\Game_client.Properties.Resources.resources
+D:\Applications\HelloWorld\Game_client\Game_client\obj\Debug\Game_client.csproj.GenerateResource.Cache

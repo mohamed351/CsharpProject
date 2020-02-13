@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApplication", "ClientApplication\ClientApplication.csproj", "{50A86227-F71F-4C0E-B312-2F9B39A33B30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomeKeyBoard", "CustomeKeyBoard\CustomeKeyBoard.csproj", "{6ED56A04-3F77-4297-9173-BBE85CD8705A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50A86227-F71F-4C0E-B312-2F9B39A33B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A86227-F71F-4C0E-B312-2F9B39A33B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A86227-F71F-4C0E-B312-2F9B39A33B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A86227-F71F-4C0E-B312-2F9B39A33B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ED56A04-3F77-4297-9173-BBE85CD8705A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED56A04-3F77-4297-9173-BBE85CD8705A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED56A04-3F77-4297-9173-BBE85CD8705A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED56A04-3F77-4297-9173-BBE85CD8705A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

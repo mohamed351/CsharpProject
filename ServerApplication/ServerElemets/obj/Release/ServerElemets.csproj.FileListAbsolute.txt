@@ -1,0 +1,5 @@
+D:\Applications\ServerApplication\ServerElemets\bin\Release\ServerElemets.dll
+D:\Applications\ServerApplication\ServerElemets\bin\Release\ServerElemets.pdb
+D:\Applications\ServerApplication\ServerElemets\bin\Release\Newtonsoft.Json.dll
+D:\Applications\ServerApplication\ServerElemets\obj\Release\ServerElemets.dll
+D:\Applications\ServerApplication\ServerElemets\obj\Release\ServerElemets.pdb

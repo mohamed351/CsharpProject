@@ -1,0 +1,8 @@
+D:\Applications\ServerApplication\ApplicationUtility\bin\Release\ApplicationUtility.dll
+D:\Applications\ServerApplication\ApplicationUtility\bin\Release\ApplicationUtility.pdb
+D:\Applications\ServerApplication\ApplicationUtility\bin\Release\Newtonsoft.Json.dll
+D:\Applications\ServerApplication\ApplicationUtility\bin\Release\ServerElemets.dll
+D:\Applications\ServerApplication\ApplicationUtility\bin\Release\ServerElemets.pdb
+D:\Applications\ServerApplication\ApplicationUtility\obj\Release\ApplicationUtility.csprojResolveAssemblyReference.cache
+D:\Applications\ServerApplication\ApplicationUtility\obj\Release\ApplicationUtility.dll
+D:\Applications\ServerApplication\ApplicationUtility\obj\Release\ApplicationUtility.pdb

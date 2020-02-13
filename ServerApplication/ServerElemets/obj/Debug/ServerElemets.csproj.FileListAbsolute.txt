@@ -1,0 +1,5 @@
+D:\Applications\ServerApplication\ServerElemets\bin\Debug\ServerElemets.dll
+D:\Applications\ServerApplication\ServerElemets\bin\Debug\ServerElemets.pdb
+D:\Applications\ServerApplication\ServerElemets\obj\Debug\ServerElemets.dll
+D:\Applications\ServerApplication\ServerElemets\obj\Debug\ServerElemets.pdb
+D:\Applications\ServerApplication\ServerElemets\obj\Debug\ServerElemets.csprojResolveAssemblyReference.cache

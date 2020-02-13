@@ -1,0 +1,7 @@
+D:\Applications\ClientApplication\ClientApplication\CustomeKeyBoard\bin\Debug\CustomeKeyBoard.dll
+D:\Applications\ClientApplication\ClientApplication\CustomeKeyBoard\bin\Debug\CustomeKeyBoard.pdb
+D:\Applications\ClientApplication\ClientApplication\CustomeKeyBoard\obj\Debug\CustomeKeyBoard.csproj.GenerateResource.Cache
+D:\Applications\ClientApplication\ClientApplication\CustomeKeyBoard\obj\Debug\CustomeKeyBoard.dll
+D:\Applications\ClientApplication\ClientApplication\CustomeKeyBoard\obj\Debug\CustomeKeyBoard.pdb
+D:\Applications\ClientApplication\ClientApplication\CustomeKeyBoard\obj\Debug\CustomeKeyBoard.CustomeKeyBoard.resources
+D:\Applications\ClientApplication\ClientApplication\CustomeKeyBoard\obj\Debug\CustomeKeyBoard.csprojResolveAssemblyReference.cache

@@ -1,0 +1,17 @@
+c:\users\mohamed beshri amer\documents\visual studio 2012\Projects\ServerApplication\ServerApplication\bin\Debug\ServerApplication.exe.config
+c:\users\mohamed beshri amer\documents\visual studio 2012\Projects\ServerApplication\ServerApplication\obj\Debug\ServerApplication.csprojResolveAssemblyReference.cache
+c:\users\mohamed beshri amer\documents\visual studio 2012\Projects\ServerApplication\ServerApplication\bin\Debug\ServerApplication.exe
+c:\users\mohamed beshri amer\documents\visual studio 2012\Projects\ServerApplication\ServerApplication\bin\Debug\ServerApplication.pdb
+c:\users\mohamed beshri amer\documents\visual studio 2012\Projects\ServerApplication\ServerApplication\obj\Debug\ServerApplication.exe
+c:\users\mohamed beshri amer\documents\visual studio 2012\Projects\ServerApplication\ServerApplication\obj\Debug\ServerApplication.pdb
+D:\Applications\ServerApplication\ServerApplication\bin\Debug\ServerApplication.exe.config
+D:\Applications\ServerApplication\ServerApplication\obj\Debug\ServerApplication.exe
+D:\Applications\ServerApplication\ServerApplication\obj\Debug\ServerApplication.pdb
+D:\Applications\ServerApplication\ServerApplication\bin\Debug\ServerApplication.exe
+D:\Applications\ServerApplication\ServerApplication\bin\Debug\ServerApplication.pdb
+D:\Applications\ServerApplication\ServerApplication\obj\Debug\ServerApplication.csprojResolveAssemblyReference.cache
+D:\Applications\ServerApplication\ServerApplication\bin\Debug\ApplicationUtility.dll
+D:\Applications\ServerApplication\ServerApplication\bin\Debug\Newtonsoft.Json.dll
+D:\Applications\ServerApplication\ServerApplication\bin\Debug\ApplicationUtility.pdb
+D:\Applications\ServerApplication\ServerApplication\bin\Debug\ServerElemets.pdb
+D:\Applications\ServerApplication\ServerApplication\bin\Debug\ServerElemets.dll

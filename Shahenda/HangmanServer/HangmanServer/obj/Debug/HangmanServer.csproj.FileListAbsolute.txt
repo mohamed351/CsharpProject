@@ -1,0 +1,12 @@
+C:\Users\shahe\onedrive\documents\visual studio 2017\Projects\HangmanServer\HangmanServer\bin\Debug\HangmanServer.exe.config
+C:\Users\shahe\onedrive\documents\visual studio 2017\Projects\HangmanServer\HangmanServer\bin\Debug\HangmanServer.exe
+C:\Users\shahe\onedrive\documents\visual studio 2017\Projects\HangmanServer\HangmanServer\bin\Debug\HangmanServer.pdb
+C:\Users\shahe\onedrive\documents\visual studio 2017\Projects\HangmanServer\HangmanServer\obj\Debug\HangmanServer.csprojResolveAssemblyReference.cache
+C:\Users\shahe\onedrive\documents\visual studio 2017\Projects\HangmanServer\HangmanServer\obj\Debug\HangmanServer.exe
+C:\Users\shahe\onedrive\documents\visual studio 2017\Projects\HangmanServer\HangmanServer\obj\Debug\HangmanServer.pdb
+F:\HangmanServer\HangmanServer\bin\Debug\HangmanServer.exe.config
+F:\HangmanServer\HangmanServer\obj\Debug\HangmanServer.exe
+F:\HangmanServer\HangmanServer\obj\Debug\HangmanServer.pdb
+D:\Applications\HelloWorld\HangmanServer\HangmanServer\bin\Debug\HangmanServer.exe.config
+D:\Applications\HelloWorld\HangmanServer\HangmanServer\obj\Debug\HangmanServer.exe
+D:\Applications\HelloWorld\HangmanServer\HangmanServer\obj\Debug\HangmanServer.pdb

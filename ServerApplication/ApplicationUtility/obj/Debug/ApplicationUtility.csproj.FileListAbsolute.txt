@@ -1,0 +1,7 @@
+D:\Applications\ServerApplication\ApplicationUtility\bin\Debug\ApplicationUtility.dll
+D:\Applications\ServerApplication\ApplicationUtility\bin\Debug\ApplicationUtility.pdb
+D:\Applications\ServerApplication\ApplicationUtility\obj\Debug\ApplicationUtility.csprojResolveAssemblyReference.cache
+D:\Applications\ServerApplication\ApplicationUtility\obj\Debug\ApplicationUtility.dll
+D:\Applications\ServerApplication\ApplicationUtility\obj\Debug\ApplicationUtility.pdb
+D:\Applications\ServerApplication\ApplicationUtility\bin\Debug\ServerElemets.pdb
+D:\Applications\ServerApplication\ApplicationUtility\bin\Debug\ServerElemets.dll
