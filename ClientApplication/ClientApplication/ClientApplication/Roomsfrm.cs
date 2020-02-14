@@ -139,7 +139,7 @@ namespace ClientApplication
                    if (result == System.Windows.Forms.DialogResult.Yes)
                    {
                        //send to Server 
-                       //UserInformation.ClientRoom.Client.Send("")
+                    
                        UserInformation.ClientRoom = new System.Net.Sockets.TcpClient();
                        UserInformation.ClientRoom.Connect(client.IpAddressString, client.PortIndex);
                        client.PlayerName2 = UserInformation.Name;
@@ -157,6 +157,33 @@ namespace ClientApplication
                    }
                 }
             }
+        }
+
+        private void watchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //select RoomClient
+            if (listRooms.SelectedItem != null)
+            {
+                var item = (RoomClient)listRooms.SelectedItem;
+               item.typeOfUser = 1;
+                item.WatcherID = UserInformation.ID;
+                item.WatcherName = UserInformation.Name;
+               UserInformation.ClientRoom = new System.Net.Sockets.TcpClient();
+               UserInformation.ClientRoom.Connect(item.IpAddressString, item.PortIndex);
+               Helper<RoomClient>.SendConvert(item, UserInformation.ClientRoom);
+
+               Watchers frm = new Watchers();
+               frm.ShowDialog();
+
+
+
+
+
+            }
+
+           
+
+
         }
     }
 }

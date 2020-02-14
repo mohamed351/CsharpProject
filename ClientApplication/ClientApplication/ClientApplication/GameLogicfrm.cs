@@ -195,21 +195,28 @@ namespace ClientApplication
 
         private void customeKeyBoard1_OnButtonClick(Button btn, CustomeKeyBoard.CustomeKeyBoard custome, char key)
         {
-            if (!string.IsNullOrEmpty(receivedMsg))
+            try
             {
-
-
-                bool iswordTrue = CheckLetter(char.Parse(btn.Text));
-                if (!iswordTrue)
+                if (!string.IsNullOrEmpty(receivedMsg))
                 {
-                    backgroundWorker2.RunWorkerAsync();
+
+
+                    bool iswordTrue = CheckLetter(char.Parse(btn.Text));
+                    if (!iswordTrue)
+                    {
+                        backgroundWorker2.RunWorkerAsync();
+                    }
+
+
                 }
-              
-                
+                else
+                {
+                    MessageBox.Show("The Game didn't start you are waiting a new User", "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("The Game didn't start you are waiting a new User","message",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
             }
 
         }
@@ -234,21 +241,28 @@ namespace ClientApplication
 
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
-            while (true)
+            try
             {
-                string message = Helper.ReciveConvert(UserInformation.ClientRoom.Client);
-                message = message.Replace("\0", string.Empty);
-                if (message != "false")
+                while (true)
                 {
-                    if (message.Length <= 1)
+                    string message = Helper.ReciveConvert(UserInformation.ClientRoom.Client);
+                    message = message.Replace("\0", string.Empty);
+                    if (message != "false")
                     {
-                        CheckLetter(char.Parse(message));
+                        if (message.Length <= 1)
+                        {
+                            CheckLetter(char.Parse(message));
+                        }
+                    }
+                    else
+                    {
+                        this.customeKeyBoard1.Dimit = true;
                     }
                 }
-                else
-                {
-                    this.customeKeyBoard1.Dimit = true;
-                }
+            }
+            catch
+            {
+
             }
         }
 
@@ -274,12 +288,12 @@ namespace ClientApplication
 
                 if (count == receivedMsg.Length)
                 {
-                    bool flag =false;
+                    bool flag =true;
                foreach (Label item in flowLayoutPanel1.Controls)
 	           {
-                   if (item.Text != "_")
+                   if (item.Text == "_")
                    {
-                       flag = true;
+                       flag = false;
                    }
 	            }
                if (flag)

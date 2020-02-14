@@ -181,44 +181,58 @@ namespace ServerApplication
             static void roomserver_OnPlayerOrWatcherEnter(Socket soket, string data, RoomServer server)
             {
  	            RoomClient client = JsonConvert.DeserializeObject<RoomClient>(data);
-              
-                if (server.Player1 ==null)
-                   {
-                      server.Player1 = soket;
-                      ShowRoomInformation(client);
-                   
-                   }
-               else if (server.Player2 == null)
-                   {
-                      Helper.SendConvert("Player : "+client.PlayerName2+" \nID: "+client.Player2ID ,server.Player1);
-                   string message =  Helper.ReciveConvert(server.Player1).Replace("\0",string.Empty);
+                if (client.typeOfUser == 0)
+                {
+                    if (server.Player1 == null)
+                    {
+                        server.Player1 = soket;
+                        ShowRoomInformation(client);
 
-                   if (message == "6")
-                   {
-                       server.Player2 = soket;
-                       ShowRoomInformation(client);
-                       server.Player2 = soket;
-                       Category cat = (Category)client.Categories;
-                       Helper<RoomClient>.SendConvert(client, server.Player2);
-                       server.ClientSendAndRecive = new Thread(SendAndReciveTheCharacters);
-                       server.ClientSendAndRecive.Start(server);
-                       
-                      
-                     
+                    }
+                    else if (server.Player2 == null)
+                    {
+                        Helper.SendConvert("Player : " + client.PlayerName2 + " \nID: " + client.Player2ID, server.Player1);
+                        string message = Helper.ReciveConvert(server.Player1).Replace("\0", string.Empty);
 
-                   }
-                   else
-                   {
-                       server.Player2ID = new Guid();
-                       server.PlayerName2 =null;
-                       client.Player2ID = new Guid();
-                       client.PlayerName2 = null;
-                        Helper<RoomClient>.SendConvert(client,server.Player2);  
-
-                   }
+                        if (message == "6")
+                        {
+                            server.Player2 = soket;
+                            ShowRoomInformation(client);
+                            server.Player2 = soket;
+                            Category cat = (Category)client.Categories;
+                            Helper<RoomClient>.SendConvert(client, server.Player2);
+                            server.ClientSendAndRecive = new Thread(SendAndReciveTheCharacters);
+                            server.ClientSendAndRecive.Start(server);
 
 
-               }
+
+
+                        }
+                        else
+                        {
+                            server.Player2ID = new Guid();
+                            server.PlayerName2 = null;
+                            client.Player2ID = new Guid();
+                            client.PlayerName2 = null;
+                            Helper<RoomClient>.SendConvert(client, server.Player2);
+
+                        }
+                    }
+
+
+
+                }
+                else if(client.typeOfUser == 1)
+                {
+                    Console.WriteLine("Watcher...");
+                    Console.WriteLine("watching for  Room :"+server.RoomName);
+                    Console.WriteLine("watching for ID :"+server.ID);
+                    server.Watchers.Add(soket);
+
+                    
+                    
+
+                }
 
 
           }
@@ -244,7 +258,7 @@ namespace ServerApplication
                     {
                         Helper.SendConvert(word, server.Player1);
                         Helper.SendConvert(word, server.Player2);
-
+                        SendWatchers(server, word);
                         server.IsStarted = true;
                     }
                     else
@@ -253,16 +267,18 @@ namespace ServerApplication
                         {
                             string message = Helper.ReciveConvert(server.Player1);
                             message = message.Replace("\0", string.Empty);
-
+                            SendWatchers(server, "Player 1:" + message);
                             if (message != "false")
                             {
                                 Console.WriteLine(message);
                                 Helper.SendConvert(message, server.Player2);
+                             
 
                             }
                             else
                             {
                                 Helper.SendConvert("false", server.Player2);
+                                
                                 flag = false;
                             }
                         }
@@ -271,7 +287,7 @@ namespace ServerApplication
                             string message = Helper.ReciveConvert(server.Player2);
                             message = message.Replace("\0", string.Empty);
 
-
+                            SendWatchers(server, "Player 2:" + message);
 
                             if (message != "false")
                             {
@@ -346,6 +362,14 @@ namespace ServerApplication
             randomWord = wordsFile[random.Next(wordsFile.Length)];
             return randomWord;
 
+        }
+        private static void SendWatchers(RoomServer server,string meg)
+        {
+            foreach (var item in server.Watchers)
+            {
+                Helper.SendConvert(meg,item);
+
+            }
         }
     }
 }

@@ -42,7 +42,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.joinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.watchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -171,21 +170,13 @@
             this.watchToolStripMenuItem.Name = "watchToolStripMenuItem";
             this.watchToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.watchToolStripMenuItem.Text = "Watch";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(589, 248);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 129);
-            this.textBox1.TabIndex = 5;
+            this.watchToolStripMenuItem.Click += new System.EventHandler(this.watchToolStripMenuItem_Click);
             // 
             // Roomsfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 749);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -217,7 +208,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnCreateRoom;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem joinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem watchToolStripMenuItem;
     }

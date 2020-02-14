@@ -30,3 +30,4 @@ D:\Applications\CsharpProjectCopy\ClientApplication\ClientApplication\ClientAppl
 D:\Applications\CsharpProjectCopy\ClientApplication\ClientApplication\ClientApplication\obj\Debug\ClientApplication.csproj.GenerateResource.Cache
 D:\Applications\CsharpProjectCopy\ClientApplication\ClientApplication\ClientApplication\obj\Debug\ClientApplication.exe
 D:\Applications\CsharpProjectCopy\ClientApplication\ClientApplication\ClientApplication\obj\Debug\ClientApplication.pdb
+D:\Applications\CsharpProjectCopy\ClientApplication\ClientApplication\ClientApplication\obj\Debug\ClientApplication.Watchers.resources

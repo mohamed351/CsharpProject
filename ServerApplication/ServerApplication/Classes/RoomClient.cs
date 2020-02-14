@@ -19,7 +19,13 @@ namespace ServerApplication.Classes
         public int Categories { get; set; }
         public int PortIndex { get; set; }
         public bool IsStarted { get; set; }
+        public int typeOfUser { get; set; }
 
+        public string WatcherName { get; set; }
+        public Guid WatcherID { get; set; }
+
+
+      
     }
 
 

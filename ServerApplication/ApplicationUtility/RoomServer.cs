@@ -35,6 +35,7 @@ namespace ApplicationUtility
             {
                 this.ID = ID;
                 this.RoomName = roomName;
+                this.Watchers = new List<Socket>();
                 
                  
               
@@ -100,6 +101,7 @@ namespace ApplicationUtility
 
         public bool IsStarted { get; set; }
 
+        public int typeOfUser { get; set; }
 
         private void OnRoomRun()
         {
