@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Classes\Categories.cs" />
     <Compile Include="Classes\Helper.cs" />
+    <Compile Include="Classes\WatcherClient.cs" />
     <Compile Include="GameLogicfrm.cs">
       <SubType>Form</SubType>
     </Compile>

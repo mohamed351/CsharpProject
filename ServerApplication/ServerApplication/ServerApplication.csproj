@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\WatcherClient.cs" />
     <Compile Include="Classes\Helper.cs" />
     <Compile Include="Classes\RoomClient.cs" />
     <Compile Include="Program.cs" />

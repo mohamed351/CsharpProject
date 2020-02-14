@@ -15,9 +15,16 @@ namespace ClientApplication
     {
         public Watchers(RoomClient client)
         {
-            
+            Control.CheckForIllegalCrossThreadCalls = false;
+           
             InitializeComponent();
             backgroundWorker1.RunWorkerAsync();
+
+            txtID1.Text = client.Player1ID.ToString();
+            txtID2.Text = client.Player2ID.ToString();
+            txtName1.Text = client.PlayerName1;
+            txtName2.Text = client.PlayerName2;
+
 
         }
         string receivedMsg = "";
@@ -27,19 +34,26 @@ namespace ClientApplication
         {
             while (true)
             {
-               string message =  Helper.ReciveConvert(UserInformation.ClientRoom.Client);
-               textBox1.Text += message +"\n";
-               if (message.Contains(":"))
-               {
-                   string[] s = message.Split(':');
-                   Player.Text = s[0];
-               }
-               else
-               {
+                WatcherClient message = Helper<WatcherClient>.ReciveConvert(UserInformation.ClientRoom);
+             
+                if (string.IsNullOrWhiteSpace(receivedMsg))
+                {
+                    receivedMsg = message.Word;
+                    AddDashLines(receivedMsg);
+                    CheckLetter(message.Key);
+                    foreach (var item in message.history)
+                    {
+                        CheckLetter(item);
 
-               }
+                    }
+                    
+                }
+                else
+                {
+                    CheckLetter(message.Key);
 
-               
+                }
+              
 
 
                 
@@ -93,6 +107,27 @@ namespace ClientApplication
 
            
 
+        }
+
+        private void AddDashLines(string guessWord)
+        {
+
+            int width = groupBox1.Width / guessWord.Length;
+            for (int i = 0; i < guessWord.Length; i++)
+            {
+
+
+                flowLayoutPanel1.Invoke(new MethodInvoker(() =>
+                {
+                    Label lb = new Label();
+                    lb.Text = "_";
+                    flowLayoutPanel1.Controls.Add(lb);
+                    lb.Location = new Point(30 + width * 20, groupBox1.Height - 35);
+                    lb.BringToFront();
+                    lb.AutoSize = true;
+                    labelsChar.Add(lb);
+                }));
+            }
         }
     }
 }

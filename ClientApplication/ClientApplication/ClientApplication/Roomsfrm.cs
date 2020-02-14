@@ -172,7 +172,7 @@ namespace ClientApplication
                UserInformation.ClientRoom.Connect(item.IpAddressString, item.PortIndex);
                Helper<RoomClient>.SendConvert(item, UserInformation.ClientRoom);
 
-               Watchers frm = new Watchers();
+               Watchers frm = new Watchers(item);
                frm.ShowDialog();
 
 

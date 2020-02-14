@@ -48,7 +48,7 @@ namespace ServerApplication
 
        public static string randomWord;
 
-      
+       public static List<char> History = new List<char>();
         
         static void Main(string[] args)
         {
@@ -258,7 +258,11 @@ namespace ServerApplication
                     {
                         Helper.SendConvert(word, server.Player1);
                         Helper.SendConvert(word, server.Player2);
-                        SendWatchers(server, word);
+                        WatcherClient client = new WatcherClient()
+                        {
+                           Word =word
+                        };
+                        SendWatchers(server, client);
                         server.IsStarted = true;
                     }
                     else
@@ -267,7 +271,19 @@ namespace ServerApplication
                         {
                             string message = Helper.ReciveConvert(server.Player1);
                             message = message.Replace("\0", string.Empty);
-                            SendWatchers(server, "Player 1:" + message);
+                            if (message.Length <= 1)
+                            {
+                                History.Add(char.Parse(message));
+                                WatcherClient watcher = new WatcherClient()
+                                {
+                                    Key = char.Parse(message),
+                                    PlayerName = "Player1 > " + server.PlayerName1,
+                                    Word = word,
+                                    history = History
+
+                                };
+                                SendWatchers(server, watcher);
+                            }
                             if (message != "false")
                             {
                                 Console.WriteLine(message);
@@ -287,7 +303,20 @@ namespace ServerApplication
                             string message = Helper.ReciveConvert(server.Player2);
                             message = message.Replace("\0", string.Empty);
 
-                            SendWatchers(server, "Player 2:" + message);
+                            if (message.Length <= 1)
+                            {
+                                History.Add(char.Parse(message));
+                                WatcherClient watcher = new WatcherClient()
+                                {
+                                    Key = char.Parse(message),
+                                    PlayerName = "Player2 > " + server.PlayerName2,
+                                    Word = word,
+                                    history = History
+                                   
+
+                                };
+                                SendWatchers(server, watcher);
+                            }
 
                             if (message != "false")
                             {
@@ -363,11 +392,12 @@ namespace ServerApplication
             return randomWord;
 
         }
-        private static void SendWatchers(RoomServer server,string meg)
+        private static void SendWatchers(RoomServer server,WatcherClient meg)
         {
             foreach (var item in server.Watchers)
             {
-                Helper.SendConvert(meg,item);
+                Helper<WatcherClient>.SendConvert(meg, item);
+
 
             }
         }
