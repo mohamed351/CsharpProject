@@ -20,10 +20,10 @@ namespace ClientApplication
             InitializeComponent();
             backgroundWorker1.RunWorkerAsync();
 
-            txtID1.Text = client.Player1ID.ToString();
-            txtID2.Text = client.Player2ID.ToString();
-            txtName1.Text = client.PlayerName1;
-            txtName2.Text = client.PlayerName2;
+            //txtID1.Text = client.Player1ID.ToString();
+            //txtID2.Text = client.Player2ID.ToString();
+            //txtName1.Text = client.PlayerName1;
+            //txtName2.Text = client.PlayerName2;
 
 
         }
@@ -112,7 +112,7 @@ namespace ClientApplication
         private void AddDashLines(string guessWord)
         {
 
-            int width = groupBox1.Width / guessWord.Length;
+         
             for (int i = 0; i < guessWord.Length; i++)
             {
 
@@ -122,7 +122,7 @@ namespace ClientApplication
                     Label lb = new Label();
                     lb.Text = "_";
                     flowLayoutPanel1.Controls.Add(lb);
-                    lb.Location = new Point(30 + width * 20, groupBox1.Height - 35);
+              
                     lb.BringToFront();
                     lb.AutoSize = true;
                     labelsChar.Add(lb);

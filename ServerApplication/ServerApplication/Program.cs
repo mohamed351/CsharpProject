@@ -197,6 +197,8 @@ namespace ServerApplication
                         if (message == "6")
                         {
                             server.Player2 = soket;
+                            server.PlayerName2 = client.PlayerName2;
+                            server.Player2ID = client.Player2ID;
                             ShowRoomInformation(client);
                             server.Player2 = soket;
                             Category cat = (Category)client.Categories;
