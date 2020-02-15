@@ -41,6 +41,7 @@ namespace ClientApplication
                     receivedMsg = message.Word;
                     AddDashLines(receivedMsg);
                     CheckLetter(message.Key);
+                    Player.Text = message.PlayerName;
                     foreach (var item in message.history)
                     {
                         CheckLetter(item);

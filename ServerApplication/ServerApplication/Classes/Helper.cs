@@ -48,10 +48,12 @@ namespace ServerApplication.Classes
        }
        public static string ReciveConvert(Socket soket)
        {
+           
 
-           byte[] array  = new byte[soket.ReceiveBufferSize];
-           soket.Receive(array);
-          return ASCIIEncoding.Default.GetString(array);
+               byte[] array = new byte[soket.ReceiveBufferSize];
+               soket.Receive(array);
+               return ASCIIEncoding.Default.GetString(array);
+           
        }
 
     
